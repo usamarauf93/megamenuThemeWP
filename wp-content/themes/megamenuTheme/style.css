@@ -1,0 +1,170 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Main Navigation Container */
+.services-menu {
+    background: #2c3e50;
+    position: relative;
+    z-index: 1000;
+    width: auto;
+    margin-left: 38%;
+}
+
+/* Navigation List */
+.services-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Menu Item */
+.services-nav > li {
+    position: relative;
+}
+
+/* Services Trigger Button */
+.services-nav > li > a {
+    display: block;
+    padding: 15px 25px;
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    background: #3498db;
+    transition: background 0.3s ease;
+}
+
+/* Mega Menu Dropdown */
+.sub-menu.mega-menu {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    max-width: 1200px;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.services-nav > li:hover .sub-menu.mega-menu {
+    display: grid;
+}
+
+/* Mega Menu Columns */
+.mega-menu-column {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.mega-menu-column:hover {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Parent Category Heading */
+.mega-menu-column > a {
+    display: block;
+    font-weight: 600;
+    color: #2c3e50 !important;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    transition: all 0.3s ease;
+}
+
+/* Child Category List */
+.sub-sub-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-sub-menu li {
+    margin: 8px 0;
+}
+
+.sub-sub-menu a {
+    display: block;
+    color: #7f8c8d !important;
+    padding: 6px 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.services-nav > li:hover > a {
+    background: #2980b9;
+}
+
+.mega-menu-column:hover > a {
+    padding-left: 10px;
+}
+
+.sub-sub-menu a:hover {
+    color: #3498db !important;
+    padding-left: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px) translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .sub-menu.mega-menu {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-menu {
+        float: none;
+        margin-right: 0;
+        width: 100%;
+    }
+    
+    .sub-menu.mega-menu {
+        grid-template-columns: 1fr;
+        position: static;
+        transform: none;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+    .mega-menu-column {
+        margin-bottom: 15px;
+    }
+}
+
+/* Main Content Spacing */
+main {
+    padding: 40px 20px;
+    clear: both;
+}
