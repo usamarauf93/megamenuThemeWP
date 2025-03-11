@@ -1,4 +1,12 @@
-/* Reset & Base Styles */
+/*
+Theme Name: WordPress Theme For Mega Menu
+
+Author: Team REI Marketing Pro
+
+Version: 1.0.0
+Requires at least: 5.0
+
+*/
 * {
     margin: 0;
     padding: 0;
@@ -12,13 +20,15 @@ body {
 
 /* Main Navigation Container */
 .services-menu {
-    background: #2c3e50;
+    background: #3498db;
     position: relative;
     z-index: 1000;
     width: auto;
     margin-left: 38%;
 }
-
+header{
+    background: #3498db;
+}
 /* Navigation List */
 .services-nav {
     display: flex;
@@ -28,6 +38,18 @@ body {
 }
 
 /* Main Menu Item */
+
+a{
+    
+
+    text-decoration-color:#2c3e50;
+    
+}
+
+li{
+    list-style-type: none !important;
+   
+}
 .services-nav > li {
     position: relative;
 }
@@ -38,6 +60,7 @@ body {
     padding: 15px 25px;
     color: #fff !important;
     text-decoration: none;
+    
     font-weight: 600;
     font-size: 16px;
     background: #3498db;
@@ -168,3 +191,52 @@ main {
     padding: 40px 20px;
     clear: both;
 }
+
+
+
+
+
+/* Additional Css */
+
+
+
+#menu-services-menu>li:nth-child(2)>ul:nth-child(2)>li:nth-child(1)>a:nth-child(1) {
+    border-bottom-width : 0px;
+    font-size: 18px;
+    }
+
+
+#menu-services-menu>li:nth-child(2)>ul:nth-child(2)>li:nth-child(2)>a:nth-child(1) {
+    border-bottom-width : 0px;
+    font-size : 18px;
+    }
+
+#menu-services-menu>li:nth-child(2)>ul:nth-child(2)>li:nth-child(3)>a:nth-child(1) {
+border-bottom-width : 0px;
+font-size : 18px;
+}
+
+#menu-services-menu>li:nth-child(2)>ul:nth-child(2)>li:nth-child(4)>a:nth-child(1) {
+border-bottom-width : 0px;
+font-size : 18px;
+}
+
+#menu-services-menu>li:nth-child(2)>ul:nth-child(2)>li:nth-child(5)>a:nth-child(1) {
+border-bottom-width : 0px;
+font-size : 18px;
+}
+
+#menu-services-menu>li:nth-child(2)>ul:nth-child(2)>li:nth-child(6)>a:nth-child(1) {
+border-bottom-width : 0px;
+font-size : 18px;
+}
+
+#menu-services-menu>li:nth-child(2)>ul:nth-child(2)>li:nth-child(7)>a:nth-child(1) {
+border-bottom-width : 0px;
+font-size : 18px;
+} 
+
+
+
+
+
