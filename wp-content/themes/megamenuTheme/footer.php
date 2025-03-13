@@ -14,6 +14,17 @@
     </div>
 </footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const servicesMenu = document.getElementById('services-menu');
+    
+    mobileMenu.addEventListener('click', function() {
+        servicesMenu.classList.toggle('active');
+    });
+});
+
+</script>
 <?php wp_footer(); ?>
 </body>
 </html>
