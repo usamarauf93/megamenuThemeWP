@@ -19,12 +19,15 @@ body {
 }
 
 /* Main Navigation Container */
-.services-menu {
-    background: #3498db;
-    position: relative;
-    z-index: 1000;
-    width: auto;
-    margin-left: 38%;
+
+@media screen and (min-width: 768px) {
+  .services-menu {
+      background: #3498db;
+      position: relative;
+      z-index: 1000;
+      width: auto;
+      margin-left: 38%;
+  }
 }
 header{
     background: #3498db;
@@ -40,10 +43,7 @@ header{
 /* Main Menu Item */
 
 a{
-    
-
-    text-decoration-color:#2c3e50;
-    
+    text-decoration-color:#ffffff00;  
 }
 
 li{
@@ -64,10 +64,17 @@ li{
     font-weight: 600;
     font-size: 16px;
     background: #3498db;
-    transition: background 0.3s ease;
+    
 }
 
+@media screen and (min-width: 768px) {
+.services-nav > li > a {
+   
+    transition: background 0.3s ease;
+}
+}
 /* Mega Menu Dropdown */
+
 .sub-menu.mega-menu {
     display: none;
     position: absolute;
@@ -81,7 +88,14 @@ li{
     border-radius: 8px;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    
+}
+
+@media screen and (min-width: 768px) {
+.sub-menu.mega-menu {
+    
     animation: fadeIn 0.3s ease-out;
+}
 }
 
 .services-nav > li:hover .sub-menu.mega-menu {
@@ -240,3 +254,80 @@ font-size : 18px;
 
 
 
+/* Hhamburger */
+
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+      
+    }
+
+    .services-menu {
+        display: none;
+        width: 100%;
+        background: #3498db;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        flex-direction: column;
+    }
+
+    .services-menu.active {
+        display: flex !important;
+        
+    }
+
+    .services-nav {
+        flex-direction: column;
+    }
+
+    .services-nav > li {
+        width: 100%;
+    }
+
+    .services-nav > li > a {
+        padding: 15px;
+        text-align: left;
+    }
+
+    .sub-menu.mega-menu {
+        position: static;
+        transform: none;
+        width: 100% !important;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .mega-menu-column {
+        padding: 10px;
+    }
+
+    .mega-menu-column > a {
+        padding: 10px;
+    }
+
+    .sub-sub-menu {
+        padding-left: 20px;
+    }
+
+
+    
+}
